@@ -83,7 +83,7 @@ sudo chmod -R 775 /var/www/html/storage
 - CONFIGURE APACHE DIRECTORY
 
 ```bash
-sudo nano /etc/apache2/available-sites/000-default.conf
+sudo nano /etc/apache2/sites-available/000-default.conf
 ```
 - change the Document root from `/var/www/html ` to `/var/www/html/public`
     - press `ctrl` + `keyboard x` on your keyboard to save (sometimes `ctrl` + `s` works just fine)
