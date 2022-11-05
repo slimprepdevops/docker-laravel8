@@ -6,8 +6,8 @@ stages {
                 sh 'sudo usermod -aG docker ${USER}'
                 sh 'newgrp docker'
                 sh 'sudo docker run hello-world'
-                sh 'sudo chown "$USER":"$USER" /home/"$USER"/.docker -R'
-                sh 'sudo chmod g+rwx "$HOME/.docker" -R'
+                sh 'sudo chown -R "$USER":"$USER" $HOME/.docker'
+                sh 'sudo chmod -R g+rw "$HOME/.docker"'
         }
     }
         stage ('Publish') {
