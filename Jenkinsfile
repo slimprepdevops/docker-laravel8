@@ -4,9 +4,8 @@ stages {
     stage ('Permissions') {
         steps {
                 sh 'sudo usermod -aG docker ${USER}'
-                sh 'su -s ${USER}'
                 sh 'newgrp docker'
-                sh 'docker run hello-world'
+                sh 'sudo docker run hello-world'
                 sh 'sudo chown "$USER":"$USER" /home/"$USER"/.docker -R'
                 sh 'sudo chmod g+rwx "$HOME/.docker" -R'
         }
