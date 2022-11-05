@@ -15,7 +15,7 @@ stages {
                     sh ' sudo docker login -u delalixx -p $dockerhubpwd'
                     }
                     sh 'sudo docker tag laravelchallenge delalixx/laravelchallenge'
-                    sh 'sudo push delalixx/laravelchallenge'
+                    sh 'sudo docker push delalixx/laravelchallenge'
                 }
             }
         }
