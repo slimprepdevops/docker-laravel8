@@ -14,7 +14,7 @@ stages {
                     withCredentials([string(credentialsId: 'dockerhubpwd', variable: 'dockerhubpwd')]) {
                     sh ' sudo docker login -u delalixx -p $dockerhubpwd'
                     }
-                    sh 'sudo docker push delalixx/laravelcontainer:tagname'
+                    sh 'sudo docker push delalixx/laravelcontainer:laravelchallenge'
                 }
             }
         }
