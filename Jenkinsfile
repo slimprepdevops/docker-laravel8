@@ -11,8 +11,8 @@ stages {
         stage ('Publish') {
             steps {
                 script {
-                    withCredentials([string(credentialsId: 'dockerhubpwd', variable: 'dockerhubpwd')]) {
-                    sh ' sudo docker login -u dockerusername -p $dockerhubpwd'
+                    withCredentials([string(credentialsId: 'dockerhubpwd', variable: 'dockerhubpwd'), string(credentialsId: 'dockerusername', variable: 'dockerusername')]) {
+                    sh ' sudo docker login -u $dockerusername -p $dockerhubpwd'
                     }
                     sh 'sudo docker tag laravelchallenge delalixx/laravelchallenge'
                     sh 'sudo docker push delalixx/laravelchallenge'
