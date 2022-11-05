@@ -1,0 +1,4 @@
+pipleine {
+agent any 
+stage
+}
