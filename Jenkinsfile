@@ -3,7 +3,6 @@ agent any
 stages {
     stage ('Permissions') {
         steps {
-                sh 'sudo groupadd docker'
                 sh 'sudo usermod -aG docker ${USER}'
                 sh 'su -s ${USER}'
                 sh 'docker run hello-world'
